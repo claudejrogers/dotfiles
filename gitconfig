@@ -1,0 +1,10 @@
+[user]
+	name = Claude Rogers
+	email = claude.j.rogers@gmail.com
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+[core]
+	editor = mvim -f

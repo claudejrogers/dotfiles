@@ -1,0 +1,38 @@
+###
+### PyMol Settings File
+###
+### Created by Adam Griffith
+### March 2012
+###
+### To use these as your default settings, copy this file to
+### ~/.pymolrc
+###
+### You can adjust or add new settings as desired.  If you find a setting
+### that you think would be useful for the group, please let everyone know.
+###
+
+# White background
+bg white
+
+# No shadows during ray-trace
+util.ray_shadows('none')
+
+# Normal view and ray-trace use orthoscopic view
+set ray_orthoscopic=on
+set ortho=on
+
+# Ray-trace background is transparent
+set ray_opaque_background=off
+
+# Speeds up rendering by increasing memory allowance
+set hash_max=200
+
+# Maximum view quality
+util.performance(0)
+
+## Surface transparency
+#set transparency=0.5
+
+## Cartoon transparency & width
+#set cartoon_transparency=0.5
+#set cartoon_oval_length=1.0
