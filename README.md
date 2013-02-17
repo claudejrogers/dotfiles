@@ -16,7 +16,7 @@ This repo contains important dotfiles.
         git clone https://github.com/claudejrogers/dotfiles.git
         cd dotfiles
         cp ~/dotfiles/oh-my-zsh/themes/cjr.zsh-theme ~/.oh-my-zsh/themes/
-        ln -s zshrc ~/.zshrc
+        ln -s ~/dotfiles/zshrc ~/.zshrc
 
 4.  Install solarized terminal theme:
 
@@ -69,8 +69,7 @@ This repo contains important dotfiles.
 
 9.  Set up git config:
 
-        cd ~/dotfiles
-        ln -s gitconfig ~/.gitconfig
+        ln -s ~/dotfiles/gitconfig ~/.gitconfig
 
 10. Set up vim-pathogen:
 
@@ -85,14 +84,12 @@ This repo contains important dotfiles.
         git clone https://github.com/Lokaltog/vim-powerline.git
         git clone https://github.com/davidhalter/jedi-vim.git
         git clone https://github.com/vim-scripts/closetag.vim.git
-        cd ~/dotfiles
-        ln -s vimrc ~/.vimrc
+        ln -s ~/dotfiles/vimrc ~/.vimrc
 
 12. Install tmux:
 
         brew install tmux
-        cd ~/dotfiles
-        ln -s tmux.conf ~/.tmux.conf
+        ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
 
 13. Install MacTeX [http://tug.org/mactex/](http://tug.org/mactex/)
 
@@ -104,8 +101,8 @@ This repo contains important dotfiles.
 
         curl -o Emacs-24.2-universal-10.6.8.dmg http://emacsformacosx.com/emacs-builds/Emacs-24.2-universal-10.6.8.dmg
         hdiutil mount Emacs-24.2-universal-10.6.8.dmg
-        sudo installer -pkg "/Volumes/../Emacs-24.2-universal-10.6.8.pkg" -target '/'
-        hdiutil unmount "/Volumes/.."
+        cp -r /Volumes/Emacs/Emacs.app /Applications
+        hdiutil unmount /Volumes/Emacs
 
 15. Install emacs-prelude [https://github.com/bbatsov/prelude](https://github.com/bbatsov/prelude):
 
@@ -118,8 +115,8 @@ This repo contains important dotfiles.
 
         curl -o XQuartz-2.7.4.dmg http://xquartz.macosforge.org/downloads/SL/XQuartz-2.7.4.dmg
         hdiutil mount XQuartz-2.7.4.dmg
-        sudo installer -pkg "/Volumes/../XQuartz-2.7.4.pkg" -target '/'
-        hdiutil unmount "/Volumes/.."
+        sudo installer -pkg "/Volumes/XQuartz-2.7.4/XQuartz.pkg" -target '/'
+        hdiutil unmount /Volumes/XQuartz-2.7.4
 
 17. Install pymol:
 

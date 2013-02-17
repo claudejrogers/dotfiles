@@ -37,7 +37,7 @@ source $ZSH/oh-my-zsh.sh
 export PATH=/Applications/Emacs.app/Contents/MacOS/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/texbin:/Users/cjrogers/bin:/Users/cjrogers/bin/nbconvert:/usr/texbin
 export PYTHONPATH=/Library/Python/2.7/site-packages
 export CLICOLOR=1
-export LSCOLORS=exgxfxdxCxHxHxCbCeEhEh
+export LSCOLORS=exgxfxdxcxHxHxCbCeEhEh
 # ENV Variables
 export LC_TYPE=en_US.UTF-8
 # export HDF5_DIR=/Users/cjrogers/dev/hdf5-1.8.8
@@ -50,7 +50,11 @@ export VISUAL="mvim -f"
 # export LSCOLORS=gxexfxdxCxHxHxCbCeEhEh
 # ls aliases
 alias ll='ls -lh'
-alias la='ls -AF'
+alias la='ls -AFhl'
+# only list files
+alias lf='ls -Al *(.)'
+# only list directories
+alias lsdir='ls -ld *(/)'
 # python package installer for older modules that can't handle gcc 4.2
 alias notebook='ipython notebook --pylab=inline'
 # server aliases
