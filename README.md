@@ -94,21 +94,21 @@ This repo contains important dotfiles.
 
         cd ~
         git clone https://github.com/claudejrogers/dotfiles.git
-        cd dotfiles
         cp ~/dotfiles/oh-my-zsh/themes/cjr.zsh-theme ~/.oh-my-zsh/themes/
         ln -s ~/dotfiles/zshrc ~/.zshrc
 
 ###4.  Install solarized terminal theme:
 
         cd ~/Desktop
-        curl -o 'Solarized Dark.terminal' https://raw.github.com/tomislav/osx-lion-terminal.app-colors-solarized/master/Solarized%20Dark.terminal 
+        curl -o 'Solarized Dark.terminal' https://raw.github.com/tomislav/osx-lion-terminal.app-colors-solarized/master/Solarized%20Dark.terminal
    Then, import theme in terminal preferences.
+   While there, set font to Menlo Regular 12 pt., Window size to 100 columns by 60 rows
 
 ###5.  Install homebrew:
 
         ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 
-###6.  Install wget, aspell:
+###6.  Install wget, aspell, image and scientific libraries:
 
         brew install wget
         brew install aspell --with-lang=en
@@ -119,9 +119,11 @@ This repo contains important dotfiles.
 
 ###7.  Set up python:
 
-        # install scipack
+        # install scipack (gfortran, numpy, scipy, matplotlib, pandas, ipython)
+        # This may be better to install by hand using this as guide...
         curl -o install_superpack.sh https://raw.github.com/fonnesbeck/ScipySuperpack/master/install_superpack.sh
         sh install_superpack.sh
+
         # Install pip
         sudo easy_install pip
         sudo pip install markdown
@@ -161,7 +163,10 @@ This repo contains important dotfiles.
         cd ~/.vim/bundle
         git clone git://github.com/altercation/vim-colors-solarized.git
         git clone https://github.com/scrooloose/nerdtree.git
+
+        # Check for new powerline repo before installing
         git clone https://github.com/Lokaltog/vim-powerline.git
+
         git clone https://github.com/davidhalter/jedi-vim.git
         git clone https://github.com/vim-scripts/closetag.vim.git
         ln -s ~/dotfiles/vimrc ~/.vimrc
@@ -188,7 +193,6 @@ This repo contains important dotfiles.
 
         curl -L https://github.com/bbatsov/prelude/raw/master/utils/installer.sh | sh
         cp ~/dotfiles/emacs.d/personal/personal.el ~/.emacs.d/personal/
-
     Check website for changes to settings in `personal.el`.
 
 ###16. Install X11 [http://xquartz.macosforge.org/landing/](http://xquartz.macosforge.org/landing/):
