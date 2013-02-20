@@ -1,6 +1,7 @@
 # dotfiles
 
-This repo contains important dotfiles.
+This repo contains important dotfiles and scripts to install essential software
+on a new hard drive or computer.
 
 ## Setting up a new computer
 
