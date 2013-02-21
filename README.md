@@ -1,7 +1,9 @@
 # dotfiles
 
 This repo contains important dotfiles and scripts to install essential software
-on a new hard drive or computer.
+on a new hard drive or computer. 
+
+**WARNING:** scripts are naive and untested 
 
 ## Setting up a new computer
 
@@ -210,7 +212,7 @@ on a new hard drive or computer.
         tar -xvjf MacPyMOL-v1.3r1-edu.tar.bz2
         cd MacPyMOL-v1.3r1-edu
         mv MacPyMol.app /Applications/PyMOLX11Hybrid.app
-        ln ~/dotfiles/pymolrc ~/.pymolrc
+        ln -s ~/dotfiles/pymolrc ~/.pymolrc
 
 ###18. Set up ssh keys with github:
 
