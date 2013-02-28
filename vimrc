@@ -62,3 +62,5 @@ set listchars=tab:,.,trail:.,extends:#,nbsp:. " Highlight problematic whitespace
 let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr']
 " let g:pymode_lint_write = 0
 let g:pymode_rope = 0
+autocmd FileType html set tabstop=2 shiftwidth=2 softtabstop=2
+nmap ,f :FufFile<CR>

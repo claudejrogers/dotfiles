@@ -58,14 +58,20 @@ alias lsdir='ls -ld *(/)'
 # python package installer for older modules that can't handle gcc 4.2
 alias notebook='ipython notebook --pylab=inline'
 # server aliases
-alias lhwlab='ssh cjrogers@lhwlab.caltech.edu'
+alias lhwlab='ssh admin@lhwlab.caltech.edu'
+alias web='ssh web@lhwlab.caltech.edu'
 alias itsssh='ssh cjrogers@its.caltech.edu'
 alias itsftp='sftp cjrogers@its.caltech.edu'
-alias hive='ssh -Y cjrogers@hive.wag.caltech.edu'
+alias hive='ssh cjrogers@hive.wag.caltech.edu'
 alias wolf='ssh -Y cjrogers@wolf11.wag.caltech.edu'
+alias atom='ssh cjrogers@atom.wag.caltech.edu'
 # emacs alias
 alias emacsdaemon='/Applications/Emacs.app/Contents/MacOS/Emacs --daemon'
 # alias sage='/Applications/Sage-5.0-OSX-64bit-10.6.app/Contents/Resources/sage/sage'
 alias pymol='/Applications/PyMOLX11Hybrid.app/Contents/MacOS/MacPyMOL'
 # get solarized/vim to work with tmux
 alias tmux="TERM=screen-256color-bce tmux"
+
+function wag() {
+    ssh cjrogers@$1.wag.caltech.edu
+}

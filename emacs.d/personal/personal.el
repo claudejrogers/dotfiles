@@ -29,7 +29,7 @@
  '(default ((t (:height 120 :family "Menlo"))))
  '(org-level-1 ((t (:foreground "#268BD2" :weight bold)))))
 
-(disable-theme 'zenburn)
+(Disable-theme 'zenburn)
 (load-theme 'solarized-dark t)
 
 (custom-set-variables
