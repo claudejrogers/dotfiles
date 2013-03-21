@@ -10,6 +10,8 @@ set guioptions-=T
 if has("gui_running")
     set lines=60
     set columns=100
+else
+    set mouse=a
 endif
 set number
 set ruler
@@ -24,14 +26,17 @@ set shiftround
 set linespace=0
 set backspace=eol,start,indent      "Allow backspace in insert mode
 set textwidth=0
+"Terminal cursor
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 "Searching
 set ignorecase
 set smartcase
 set incsearch
 set showmatch
 set hlsearch
-set guifont=Menlo:h12
 set hidden                          "Allow buffer switching w/o saving
+set guifont=Menlo:h12
 " python-mode
 let g:pymode_folding = 0
 let g:pymode_rope_guess_project = 0
