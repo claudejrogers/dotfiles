@@ -61,6 +61,8 @@ export VISUAL="mvim -f"
 # GREP
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR=';32'
+# ruby
+eval "$(rbenv init -)"
 # ls aliases
 alias ll='ls -lh'
 alias la='ls -AFhl'
@@ -70,14 +72,6 @@ alias lf='ls -Al *(.)'
 alias lsdir='ls -ld *(/)'
 # python package installer for older modules that can't handle gcc 4.2
 alias notebook='ipython notebook --pylab=inline'
-# server aliases
-alias lhwlab='ssh admin@lhwlab.caltech.edu'
-alias web='ssh web@lhwlab.caltech.edu'
-alias itsssh='ssh cjrogers@its.caltech.edu'
-alias itsftp='sftp cjrogers@its.caltech.edu'
-alias hive='ssh cjrogers@hive.wag.caltech.edu'
-alias wolf='ssh -Y cjrogers@wolf11.wag.caltech.edu'
-alias atom='ssh cjrogers@atom.wag.caltech.edu'
 # emacs alias
 alias emacsdaemon='/Applications/Emacs.app/Contents/MacOS/Emacs --daemon'
 # alias sage='/Applications/Sage-5.0-OSX-64bit-10.6.app/Contents/Resources/sage/sage'
@@ -87,5 +81,5 @@ alias tmux="TERM=screen-256color-bce tmux"
 # pygmentize alias
 alias pycat="pygmentize"
 function wag() {
-    ssh cjrogers@$1.wag.caltech.edu
+    ssh `whoami`@$1.wag.caltech.edu
 }
