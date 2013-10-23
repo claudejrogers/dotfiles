@@ -37,6 +37,9 @@ set showmatch
 set hlsearch
 set hidden                          "Allow buffer switching w/o saving
 set guifont=Menlo:h12
+" <leader> and <localleader> mappings
+let mapleader=','
+let maplocalleader=' '
 " python-mode
 let g:pymode_folding = 0
 let g:pymode_rope_guess_project = 0
@@ -52,11 +55,13 @@ if has('statusline')
     set laststatus=2
     set statusline=%<%f\                     " Filename
     set statusline+=%w%h%m%r                 " Options
-    "set statusline+=%{fugitive#statusline()} "  Git Hotness
+    set statusline+=%{fugitive#statusline()} "  Git Hotness
     set statusline+=\ [%{&ff}/%Y]            " filetype
     set statusline+=\ [%{getcwd()}]          " current dir
     set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
 endif
+let g:airline_right_sep=''
+let g:airline_left_sep=''
 set wildmenu                    " show list instead of just completing
 set wildmode=list:longest,full  " command <Tab> completion, list matches, then longest common part, then all.
 set whichwrap=b,s,h,l,<,>,[,]   " backspace and cursor keys wrap to
@@ -64,8 +69,17 @@ set scrolljump=5                " lines to scroll when cursor leaves screen
 set list
 set listchars=tab:,.,trail:.,extends:#,nbsp:. " Highlight problematic whitespace
 " NERDTree
-let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr']
+let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr', '\.so']
 " let g:pymode_lint_write = 0
 let g:pymode_rope = 0
 autocmd FileType html set tabstop=2 shiftwidth=2 softtabstop=2
 nmap ,f :FufFile<CR>
+" files
+nnoremap <silent><Leader>o :Unite -silent -start-insert file<CR>
+nnoremap <silent><Leader>O :Unite -silent -start-insert file_rec/async<CR>
+nnoremap <silent><Leader>m :Unite -silent file_mru<CR>
+" buffers
+nnoremap <silent><Leader>b :Unite -silent buffer<CR>
+nnoremap <Leader>T :ConqueTermSplit ipython<CR>
+let g:unite_force_overwrite_statusline=0
+let g:unite_prompt='>>> '
